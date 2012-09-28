@@ -1,3 +1,4 @@
 .vagrant
 logs/*
 .DS_Store
+public/assets/_combinedfiles/

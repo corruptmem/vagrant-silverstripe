@@ -9,9 +9,6 @@ mysql -u root -pomega < /vagrant/config/db-SS_mysite-create.sql
 echo "Restoring SQL dump"
 mysql -u root -pomega SS_mysite < /vagrant/config/db-SS_mysite.dump
 
-chmod -R uga+rw /vagrant/public/assets
-chmod -R ug+rw /vagrant/public
-
 usermod -a -G vagrant www-data
 
 cp /vagrant/config/php.ini /etc/php5/apache2/php.ini
