@@ -1,8 +1,13 @@
 #!/bin/bash
 
+echo "Deleting SS_mysite"
 mysqladmin -f --password=omega drop SS_mysite >>/vagrant/logs/provision.log 2>&1
+
+echo "Creating new SS_mysite"
 mysql -u root -pomega < /vagrant/config/db-SS_mysite-create.sql
-mysql -u root -pomega < /vagrant/config/db-SS_mysite.dump
+
+echo "Restoring SQL dump"
+mysql -u root -pomega SS_mysite < /vagrant/config/db-SS_mysite.dump
 
 chmod g+w /vagrant/public/assets
 
