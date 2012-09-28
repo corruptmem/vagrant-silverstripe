@@ -1,5 +1,9 @@
 #!/bin/bash
 
+chmod g+w /vagrant/public/assets
+chmod g+w /vagrant/public/.htaccess
+chmod g+w /vagrant/public/mysite/_config.php
+
 usermod -a -G vagrant www-data
 
 cp /vagrant/config/php-date.ini /etc/php5/apache2/conf.d/date.ini
