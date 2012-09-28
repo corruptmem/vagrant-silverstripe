@@ -1,6 +1,8 @@
 #!/bin/bash
 
 mysqladmin -f --password=omega drop SS_mysite >>/vagrant/logs/provision.log 2>&1
+mysql -u root -pomega < /vagrant/config/db-SS_mysite-create.sql
+mysql -u root -pomega < /vagrant/config/db-SS_mysite.dump
 
 chmod g+w /vagrant/public/assets
 

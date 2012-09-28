@@ -1,0 +1,1 @@
+CREATE DATABASE SS_mysite;
