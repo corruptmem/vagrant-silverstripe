@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mysqladmin -f --password=omega drop SS_mysite >>/vagrant/logs/provision.log 2>&1
+
 chmod g+w /vagrant/public/assets
 chmod g+w /vagrant/public/.htaccess
 chmod g+w /vagrant/public/mysite/_config.php
