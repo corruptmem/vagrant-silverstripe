@@ -26,7 +26,9 @@ $ # 2. Check out this repo (Well, I recommend forking then cloning your fork..)
 $ git clone https://github.com/corruptmem/vagrant-silverstripe.git
 [...]
 $ cd vagrant-silverstripe/
-$ 
+$ git submodule init
+$ git submodule update
+[...]
 $ # Start her up!
 $ vagrant up
 [...]
